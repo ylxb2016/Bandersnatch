@@ -18,7 +18,7 @@ Table of Contents
   - [1.2. Playback offline](#12-playback-offline)
 - [2. Keyboard controls](#2-keyboard-controls)
 - [3. Screenshot](#3-screenshot)
-- [4. Tips](#4-tips)
+- [4. Introduction](#4-introduction)
   - [4.1. Codec/Container Compatibility](#41-codeccontainer-compatibility)
   - [4.2. Security Restrictions](#42-security-restrictions)
     - [4.2.1. Chromium based Browser](#421-chromium-based-browser)
@@ -82,7 +82,7 @@ Tips：
   
 ![non full screen mode](screenshot/non-full-screen.cn.en.png)
 
-## 4. Tips
+## 4. Introduction
 
 Obtain the Bandersnatch video file (duration should be 5:12:40).
 
