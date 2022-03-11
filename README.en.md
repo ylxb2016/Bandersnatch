@@ -159,7 +159,7 @@ start Firefox -new-tab about:config
 
 - accept the risks
 
-![warning_in_Firefox](screenshot/warning_in_fireFox.en.png)
+![warning_in_Firefox](screenshot/warning_in_firefox.en.png)
 
 - search `privacy.file_unique_origin`
 
