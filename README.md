@@ -5,7 +5,7 @@
 
 [**中文在线演示版**](https://ylxb2016.github.io/Bandersnatch/)
 
-[**English Version**](https://github.com/ylxb2016/Bandersnatch/README.en.md)
+[**English Version**](https://github.com/ylxb2016/Bandersnatch/blob/main/README.en.md)
 
 [**English Live demo**](https://ylxb2016.github.io/Bandersnatch/index.en.html)
 
