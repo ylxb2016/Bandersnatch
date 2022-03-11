@@ -1,0 +1,315 @@
+/*
+ * This is free and unencumbered software released into the public domain.
+ *
+ * Anyone is free to copy, modify, publish, use, compile, sell, or
+ * distribute this software, either in source code form or as a compiled
+ * binary, for any purpose, commercial or non-commercial, and by any
+ * means.
+ *
+ * In jurisdictions that recognize copyright laws, the author or authors
+ * of this software dedicate any and all copyright interest in the
+ * software to the public domain. We make this dedication for the benefit
+ * of the public at large and to the detriment of our heirs and
+ * successors. We intend this dedication to be an overt act of
+ * relinquishment in perpetuity of all present and future rights to this
+ * software under copyright law.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+ * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * For more information, please refer to <http://unlicense.org>
+ */
+
+body {
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    background: black;
+
+}
+
+.main {
+    background: #ddd;
+}
+
+video {
+    width: 100%;
+    max-height: 100%;
+}
+
+.controls {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.controls ul {
+    font: 20px sans-serif;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.controls ul li {
+    flex: 0 1 auto;
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+    background: #0403031f;
+    display: table;
+    text-align: center;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.controls ul li:first-child {
+    background: #ffffff45;
+    left: 0;
+}
+
+#progress {
+    background-color: #ff4949f7;
+    width: 0%;
+    height: 6px;
+    margin: auto;
+    border-radius: 0;
+    position: relative;
+    top: 0;
+    z-index: 999;
+}
+
+
+
+#choiceCaption,
+#interactionZones,
+#nextSegments,
+#nextSegment {
+    display: none;
+}
+
+/* comment to show links */
+.controls a {
+    color: #ffffffa6;
+    text-decoration: none;
+    text-shadow: 0px 0px 10px #000;
+    animation: choices 3s forwards;
+    font-size: 2em;
+    /* display: block; */
+    /* margin: 50%; */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.controls a:hover {
+    color: white;
+}
+
+.controls a:active,
+.controls a:focus {
+    color: white;
+    text-decoration: underline solid white
+}
+
+@keyframes choices {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+video::cue {
+    font: 60% sans-serif;
+    color: white;
+    background: none;
+    text-shadow: 0px 0px 10px #000;
+}
+
+#c {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+#c:-webkit-full-screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+#c:-moz-full-screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+#c:-ms-fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+#c:fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+section[role="banner"] {
+    position: relative;
+    width: 100%;
+}
+
+#wrapper-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+video::-webkit-media-controls-panel {
+    width: 40px;
+}
+
+#file-selector {
+    display: none;
+    background: #00000073;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    display: table;
+    text-align: center;
+}
+
+.file-area {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.file-area input[type=file] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-area .file-dummy {
+    border: 2px dashed #ccc;
+    background-color: #fff;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    margin: 0 auto;
+    width: 76%;
+    height: auto;
+    font-size: 1.5em;
+    padding: 4% 10%;
+}
+
+.file-area .file-dummy .success {
+    display: none;
+}
+
+.file-area:hover .file-dummy {
+    border: 2px dashed #1abc9c;
+}
+
+.file-area input[type=file]:valid+.file-dummy {
+    border-color: #1abc9c;
+}
+
+.file-area input[type=file]:valid+.file-dummy .success {
+    display: none;
+}
+
+.file-area input[type=file]:valid+.file-dummy .default {
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+ul.file-tips,
+ul.controls-tips {
+    /* list-style-type: none; */
+    border-top: 1px solid black;
+    padding: 16px;
+    width: inherit;
+    margin: 0;
+    margin: 15px auto;
+    text-align: left;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1em;
+}
+
+ul.file-tips > li,
+ul.controls-tips > li {
+    font-size: .45em;
+}
+
+.contact {
+    position: absolute;
+    bottom: 0;
+    background: #ffffff7a;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    padding: 1px;
+    z-index: 99999;
+}
+
+.contact p {
+    font-size: 1em;
+}
+
+kbd {
+    background-color: #fafbfc;
+    border: 1px solid #c6cbd1;
+    border-bottom-color: rgb(198, 203, 209);
+    border-bottom-color: #959da5;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #959da5;
+    color: #444d56;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 10px;
+    padding: 3px 5px;
+    vertical-align: middle;
+}
+
+h6 {
+    margin-top: 0;
+    margin-bottom: 21px;
+}
+.menu-item::after {
+    content: '\2807';
+    font-size: 2em;
+}
