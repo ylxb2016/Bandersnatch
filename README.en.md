@@ -41,7 +41,7 @@ Table of Contents
 ### 1.1. Playback online 
   
 
-The only thing you need is `5:12:40` video file of `Bandersnatch` episode, Drag & drop the file in [English Live demo](https://ylxb2016.github.io/Bandersnatch/) page and enjoy!
+The only thing you need is `5:12:40` video file of `Bandersnatch` episode, Drag & drop the file in [English Live demo](https://ylxb2016.github.io/Bandersnatch/index.en.html) page and enjoy!
 
 ### 1.2. Playback offline
 
@@ -106,7 +106,7 @@ Chromium based Browser(Google Chrome,**Microsoft Edge(Recommend!)**,Opera,SogouE
 Any modern browser with good html5 compatibility can play normally by `index.html`, but due to browser security restrictions, browsers cannot accesse local data files through the file:// protocol by default when playing offline, resulting in failing to load subtitles files. Here are 2 methods:
 
 - To *skip the browser's file:// protocol security restrictions* by **advanced settings** 
-- Hosting it to local web mode like [**Live demo**](https://ylxb2016.github.io/Bandersnatch/). You can use portable program like `Quick ‘n Easy Web Server`, or more professional but complicated programs: Nginx/Apache.
+- Hosting it to local web mode like [**Live demo**](https://ylxb2016.github.io/Bandersnatch/index.en.html). You can use portable program like `Quick ‘n Easy Web Server`, or more professional but complicated programs: Nginx/Apache.
 
 
 PS: Only tested at Windows10. Please search the relevant advanced settings if you use Linux/MacOS.
@@ -159,18 +159,18 @@ start Firefox -new-tab about:config
 
 - accept the risks
 
-![warning_in_Firefox](screenshot/warning_in_FireFox.en.png)
+![warning_in_Firefox](screenshot/warning_in_fireFox.en.png)
 
 - search `privacy.file_unique_origin`
 
-![value_add_in_Firefox](screenshot/value_add_in_Firefox.png)
+![value_add_in_Firefox](screenshot/value_add_in_firefox.png)
 
 - set the value to `False`
-![false_set_in_Firefox](screenshot/false_set_in_Firefox.png)
+![false_set_in_Firefox](screenshot/false_set_in_firefox.png)
 
 - If you have playback issues with Firefox, try to check the Permission settings:
 
-![Firefox setting](screenshot/Firefox_setting.en.png)
+![Firefox setting](screenshot/firefox_setting.en.png)
 
 #### 4.2.3. Local host
 

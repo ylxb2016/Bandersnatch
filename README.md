@@ -152,18 +152,18 @@ start opera --allow-file-access-from-files --allow-file-access --allow-cross-ori
 start Firefox -new-tab about:config
 ```
 
-![Firefox高级首选项警告](screenshot/warning_in_Firefox.png)
+![Firefox高级首选项警告](screenshot/warning_in_firefox.png)
 
 搜索`privacy.file_unique_origin`点击添加
 
-![Firefox添加高级设置](screenshot/value_add_in_Firefox.png)
+![Firefox添加高级设置](screenshot/value_add_in_firefox.png)
 
 双击选项，将设置从True调整为False
-![调整为False](screenshot/false_set_in_Firefox.png)
+![调整为False](screenshot/false_set_in_firefox.png)
 
 如果Firefox无法正常播放，请检查浏览器的权限设置
 
-![Firefox setting](screenshot/Firefox_setting.png)
+![Firefox setting](screenshot/firefox_setting.png)
 
 #### 4.2.3. 本地WEB搭建
 
@@ -221,7 +221,7 @@ Chrome等显示所有控件
 
 Firefox显示所有控件
 
-![Firefox显示所有控件](screenshot/show_controls_in_Firefox.png)
+![Firefox显示所有控件](screenshot/show_controls_in_firefox.png)
 
 页面右下角菜单位置
 
