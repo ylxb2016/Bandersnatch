@@ -40,11 +40,11 @@
 	<script src="assets/SegmentMap.js"></script>
 	<script src="assets/scripts_en.js"></script>
 	<script>
-	 // keep localizable strings out of scripts.js
-	 function askReset() {
-		 if (confirm('Are you sure you want to reset all choices, breadcrumbs, and watched scenes?'))
-			 reset();
-	 }
+		// keep localizable strings out of scripts.js
+		function askReset() {
+			if (confirm('Are you sure you want to reset all choices, breadcrumbs, and watched scenes?'))
+				reset();
+		}
 	</script>
 	<link rel="stylesheet" type="text/css" href="assets/styles.css">
 </head>
@@ -57,32 +57,68 @@
 					<div class="file-area">
 						<div class="contact">
 							<p>
-								Original Author - <a href="https://mehotkhan.github.io/BandersnatchInteractive/">Mehotkhan</a> |
-								Translation, improvements, and subtitles- <a href="https://github.com/ylxb2016">ylxb2016</a>
+								Original Author - <a
+									href="https://mehotkhan.github.io/BandersnatchInteractive/">Mehotkhan</a> |
+								Translation, improvements, and subtitles- <a
+									href="https://github.com/ylxb2016/Bandersnatch">ylxb2016</a>
 								<br>
-								This player remembers your choices and watch history. <a href="javascript:askReset()">Click here to reset and start from scratch.</a>
+								This player remembers your choices and watch history. <a
+									href="javascript:askReset()">Click here to reset and start from scratch.</a>
 							</p>
 						</div>
-						<input id="fileinput" name="Bandersnatch video file (duration 5:12:40)" type="file" accept=".mkv,.mp4">
+						<input id="fileinput" name="Bandersnatch video file (duration 5:12:40)" type="file"
+							accept=".mkv,.mp4">
 						<div class="file-dummy">
 							<h2>Bandersnatch Interactive Player</h2>
-							<span class="default" style="color:blue;">Drag video(5:12:40) on top of this box (or click here to select it).</span>
+							<span class="default" style="color:blue;">Drag video(5:12:40) on top of this box (or click
+								here to select it).</span>
 							<span class="success">Great, your file is selected</span>
 							<ul class="file-tips">
-								<li>Chromium based Browser(Google Chrome,Microsoft Edge,Opera, etc.) support MP4 and MKV, while Firefox only MP4.</li>
-								<li>Microsoft Edge(99.0.1150.30) support x265/x264 codec and AAC/AC3 codec, while Chrome(99.0.4844.51) or Firefox(97.0.2) only x264 and AAC codec.</li>
-								<li><strong><span style="color:#E53333;">When Playing offline</span></strong>,due to browser security restrictions, browsers cannot load files through the file:// protocol directly, resulting in <strong><span style="color:#E53333;">failing to load subtitles files </span></strong>.Here are some solution:<br />
-								<ol>
-										<li><strong><span style="color:#E53333;">Close all the browser tabs</span></strong>, then open the <strong><span style="color:#E53333;">autoplay.bat</span></strong></li>
-										<li>Chrome<strong>: <span style="color:#E53333;">Close all the Chrome tabs</span></strong>，and start the Chrome by CMD with <code>start chrome --allow-file-access-from-files --allow-file-access --allow-cross-origin-auth-prompt</code>, then open the index.html with it.</li>
-										<li>Microsoft Edge: same as Chrome, but with <code>start msedge --allow-file-access-from-files --allow-file-access --allow-cross-origin-auth-prompt</code></li>
-										<li>FireFox: enter <code>about:config</code> in the address bar to open <strong><span style="color:#E53333;">Advanced Preferences</span></strong>,accept the risks,then search<code>privacy.file_unique_origin</code> in the list using the search bar,double click on the line to pass the value to <strong><span style="color:#E53333;">False</span></strong>.</li></ol>
+								<li>Chromium based Browser(Google Chrome,Microsoft Edge,Opera, etc.) support MP4 and
+									MKV, while Firefox only MP4.</li>
+								<li>Microsoft Edge(99.0.1150.30) support x265/x264 codec and AAC/AC3 codec, while
+									Chrome(99.0.4844.51) or Firefox(97.0.2) only x264 and AAC codec.</li>
+								<li><strong><span style="color:#E53333;">When Playing offline</span></strong>,due to
+									browser security restrictions, browsers cannot load files through the file://
+									protocol directly, resulting in <strong><span style="color:#E53333;">failing to load
+											subtitles files </span></strong>.Here are some solution:<br />
+									<ol>
+										<li><strong><span style="color:#E53333;">Close all the browser
+													tabs</span></strong>, then open the <strong><span
+													style="color:#E53333;">autoplay.bat</span></strong></li>
+										<li>Chrome<strong>: <span style="color:#E53333;">Close all the Chrome
+													tabs</span></strong>，and start the Chrome by CMD with
+											<code>start chrome --allow-file-access-from-files --allow-file-access --allow-cross-origin-auth-prompt</code>,
+											then open the index.html with it.
+										</li>
+										<li>Microsoft Edge: same as Chrome, but with
+											<code>start msedge --allow-file-access-from-files --allow-file-access --allow-cross-origin-auth-prompt</code>
+										</li>
+										<li>FireFox: enter <code>about:config</code> in the address bar to open
+											<strong><span style="color:#E53333;">Advanced
+													Preferences</span></strong>,accept the risks,then
+											search<code>privacy.file_unique_origin</code> in the list using the search
+											bar,double click on the line to pass the value to <strong><span
+													style="color:#E53333;">False</span></strong>.
+										</li>
+									</ol>
 								</li>
 								<li>Obtain the Bandersnatch video file (duration should be 5:12:40).
-									Tested with <code>Black.Mirror.Bandersnatch.2018.1080p.NF.WEB-DL.x264.AAC-PTerWEB.mp4</code>.</li>
-								<li>English SDH is default. Retail Subtitles in many languages are Simplified Chinese,Traditional Chinese,English SDH,Arabic,Danish,German,Greek,Spanish(es),Spanish(es-ES),Finnish,French,Hebrew, Indonesian,Icelandic,Italian,Japanese,Korean,Norwegian (Bokmål),Dutch,Polish,Portuguese (Portugal),Portuguese (Brazil),Romanian,Russian,Swedish,Thai,Turkish,Vietnamese.</li>
-								<li>To change the subtitle: 1.Right click on the video. 2.Enable "Show controls". 3.Click on the <span class="menu-item"></span> in the bottom-right. 4.Select the desired subtitle. 5.You can now hide the player controls in the same way as step 1-2.</li>
-								<li>Note: You can change the subtitles or speed after enabling "Show controls", but do NOT use the "full screen" button in the video player if you enable "Show controls".
+									Tested with
+									<code>Black.Mirror.Bandersnatch.2018.1080p.NF.WEB-DL.x264.AAC-PTerWEB.mp4</code>.
+								</li>
+								<li>English SDH is default. Retail Subtitles in many languages are Simplified
+									Chinese,Traditional Chinese,English
+									SDH,Arabic,Danish,German,Greek,Spanish(es),Spanish(es-ES),Finnish,French,Hebrew,
+									Indonesian,Icelandic,Italian,Japanese,Korean,Norwegian
+									(Bokmål),Dutch,Polish,Portuguese (Portugal),Portuguese
+									(Brazil),Romanian,Russian,Swedish,Thai,Turkish,Vietnamese.</li>
+								<li>To change the subtitle: 1.Right click on the video. 2.Enable "Show controls".
+									3.Click on the <span class="menu-item"></span> in the bottom-right. 4.Select the
+									desired subtitle. 5.You can now hide the player controls in the same way as step
+									1-2.</li>
+								<li>Note: You can change the subtitles or speed after enabling "Show controls", but do
+									NOT use the "full screen" button in the video player if you enable "Show controls".
 									Choice selection interface will not be visible if you do this.</li>
 							</ul>
 
@@ -90,7 +126,8 @@
 								<h6>Keyboard controls</h6>
 								<li><kbd>F</kbd> / <kbd>F11</kbd> / <kbd>Double Click</kbd> - Toggle fullscreen</li>
 								<li><kbd>Space</kbd> / <kbd>Mouse Click</kbd>- Toggle play and pause</li>
-								<li><kbd>→</kbd> / <kbd>←</kbd> - Jump to the next / previous segment (or interaction zone)</li>
+								<li><kbd>→</kbd> / <kbd>←</kbd> - Jump to the next / previous segment (or interaction
+									zone)</li>
 								<li><kbd>↑</kbd> / <kbd>↓</kbd> - Speed up / slow down playback</li>
 								<li><kbd>R</kbd> - Restart video</li>
 								<li><kbd>F5</kbd> - Refresh the page</li>
@@ -110,7 +147,8 @@
 						<track label="繁體中文" kind="subtitles" srclang="zh-Hant"
 							src="subtitle/Black.Mirror.Bandersnatch.2018.1080p.NF.WEB-DL.x264.AAC-PTerWEB.zh-Hant.vtt">
 						<track label="English SDH" kind="captions" srclang="en"
-							src="subtitle/Black.Mirror.Bandersnatch.2018.1080p.NF.WEB-DL.x264.AAC-PTerWEB.en[cc].vtt" default>
+							src="subtitle/Black.Mirror.Bandersnatch.2018.1080p.NF.WEB-DL.x264.AAC-PTerWEB.en[cc].vtt"
+							default>
 						<track label="العربية" kind="subtitles" srclang="ar"
 							src="subtitle/Black.Mirror.Bandersnatch.2018.1080p.NF.WEB-DL.x264.AAC-PTerWEB.ar.vtt">
 						<track label="Dansk" kind="subtitles" srclang="da"

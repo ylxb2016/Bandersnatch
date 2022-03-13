@@ -33,18 +33,17 @@
 	<meta charset="utf-8">
 
 	<title>黑镜：潘达斯奈基 互动播放器</title>
-	<meta name="description"
-		content="黑镜：潘达斯奈基 互动播放器 (基于浏览器)" />
+	<meta name="description" content="黑镜：潘达斯奈基 互动播放器 (基于浏览器)" />
 	<meta name="keywords" content="Bandersnatch,Black Mirror,潘达斯奈基,黑镜,互动播放器," />
 	<script src="assets/bandersnatch.js"></script>
 	<script src="assets/SegmentMap.js"></script>
 	<script src="assets/scripts.js"></script>
 	<script>
-	 // keep localizable strings out of scripts.js
-	 function askReset() {
-		 if (confirm('您确定要重置所有选项吗？'))
-			 reset();
-	 }
+		// keep localizable strings out of scripts.js
+		function askReset() {
+			if (confirm('您确定要重置所有选项吗？'))
+				reset();
+		}
 	</script>
 	<link rel="stylesheet" type="text/css" href="assets/styles.css">
 </head>
@@ -58,7 +57,7 @@
 						<div class="contact">
 							<p>
 								原作者 - <a href="https://mehotkhan.github.io/BandersnatchInteractive/">Mehotkhan</a> |
-								汉化，文本优化及字幕- <a href="https://github.com/ylxb2016">ylxb2016</a>
+								汉化，文本优化及字幕- <a href="https://github.com/ylxb2016/Bandersnatch">ylxb2016</a>
 								<br>
 								播放器会记住你之前的选择和观看历史记录。 <a href="javascript:askReset()">单击此处重置，从头开始。</a>
 							</p>
@@ -66,24 +65,44 @@
 						<input id="fileinput" name="请选择时长为5:12:40的《黑镜：潘达斯奈基》视频文件" type="file" accept=".mkv,.mp4">
 						<div class="file-dummy">
 							<h2>黑镜：潘达斯奈基 互动播放器</h2>
-							<span class="default" style="color:blue;">将视频文件拖动到此方框内；<br />或单击方框内任意位置，选择时长为5:12:40的《黑镜：潘达斯奈基》视频文件</span>
+							<span class="default"
+								style="color:blue;">将视频文件拖动到此方框内；<br />或单击方框内任意位置，选择时长为5:12:40的《黑镜：潘达斯奈基》视频文件</span>
 							<span class="success">视频文件选择完成。</span>
 							<ul class="file-tips">
-								<li>基于Chromium内核的浏览器（Google Chrome,Microsoft Edge【强烈推荐】,Opera,搜狗浏览器等）支持mkv和mp4；Firefox火狐浏览器仅支持mp4格式。</li>
-								<li>经测试，谷歌Chrome 99.0.4844.51及FireFox 97.0.2支持x264视频编码及AAC音频编码，不支持x265视频编码及杜比AC3音频编码；<br />
-									微软Edge浏览器 99.0.1150.30 除了x264和AAC外，也支持x265及AC3；其他浏览器未测试，这取决于浏览器对html5音视频编码的支持以及你电脑上的解码器。</li>
-								<li><strong><span style="color:#E53333;">离线播放时 </span></strong>，由于浏览器的安全限制，Chrome等浏览器默认不可以通过file协议加载文件，从而导致 <strong><span style="color:#E53333;">无法加载字幕文件 </span></strong>。<br />
-								<ol>
-										<li><strong><span style="color:#E53333;">先关闭所有浏览器窗口</span></strong>后，直接双击打开文件夹内的<strong><span style="color:#E53333;">自动播放.bat文件 </span></strong>，会在几秒后(有一定的启动时间)自动新打开一个可以选择字幕的浏览器。</li>
-										<li>Chrome浏览器，可以<strong><span style="color:#E53333;">先关闭所有Chrome浏览器窗口</span></strong>，然后再在CMD内<code>start chrome --allow-file-access-from-files --allow-file-access --allow-cross-origin-auth-prompt</code> 参数启动浏览器，最终在此新启动的浏览器界面内打开对应的html文件。
-										<li>微软Edge浏览器，可使用<code>start msedge --allow-file-access-from-files --allow-file-access --allow-cross-origin-auth-prompt</code>来启动，最终在此新启动的浏览器界面内打开对应的html文件。</li>
-										<li>FireFox浏览器，则需要在地址栏输入<code>about:config</code>来打开高级设置，然后搜索<code>privacy.file_unique_origin</code>双击选项，将设置从True调整为False，然后刷新网页即可。（默认情况下，FireFox显示的字幕可能不太大，可以通过【Crtl+鼠标滚轮】调节字体大小，【Ctrl +0】 恢复默认字体大小。）</li></ol>
+								<li>基于Chromium内核的浏览器（Google Chrome,Microsoft
+									Edge【强烈推荐】,Opera,搜狗浏览器等）支持mkv和mp4；Firefox火狐浏览器仅支持mp4格式。</li>
+								<li>经测试，谷歌Chrome 99.0.4844.51及FireFox
+									97.0.2支持x264视频编码及AAC音频编码，不支持x265视频编码及杜比AC3音频编码；<br />
+									微软Edge浏览器 99.0.1150.30
+									除了x264和AAC外，也支持x265及AC3；其他浏览器未测试，这取决于浏览器对html5音视频编码的支持以及你电脑上的解码器。</li>
+								<li><strong><span style="color:#E53333;">离线播放时
+										</span></strong>，由于浏览器的安全限制，Chrome等浏览器默认不可以通过file协议加载文件，从而导致 <strong><span
+											style="color:#E53333;">无法加载字幕文件 </span></strong>。<br />
+									<ol>
+										<li><strong><span
+													style="color:#E53333;">先关闭所有浏览器窗口</span></strong>后，直接双击打开文件夹内的<strong><span
+													style="color:#E53333;">自动播放.bat文件
+												</span></strong>，会在几秒后(有一定的启动时间)自动新打开一个可以选择字幕的浏览器。</li>
+										<li>Chrome浏览器，可以<strong><span
+													style="color:#E53333;">先关闭所有Chrome浏览器窗口</span></strong>，然后再在CMD内<code>start chrome --allow-file-access-from-files --allow-file-access --allow-cross-origin-auth-prompt</code>
+											参数启动浏览器，最终在此新启动的浏览器界面内打开对应的html文件。
+										<li>微软Edge浏览器，可使用<code>start msedge --allow-file-access-from-files --allow-file-access --allow-cross-origin-auth-prompt</code>来启动，最终在此新启动的浏览器界面内打开对应的html文件。
+										</li>
+										<li>FireFox浏览器，则需要在地址栏输入<code>about:config</code>来打开高级设置，然后搜索<code>privacy.file_unique_origin</code>双击选项，将设置从True调整为False，然后刷新网页即可。（默认情况下，FireFox显示的字幕可能不太大，可以通过【Crtl+鼠标滚轮】调节字体大小，【Ctrl
+											+0】 恢复默认字体大小。）</li>
+									</ol>
 								</li>
 								<li>请自行下载时长为5:12:40的《黑镜：潘达斯奈基》视频文件。
-									本播放器已经<code>Black.Mirror.Bandersnatch.2018.1080p.NF.WEB-DL.x264.AAC-PTerWEB.mp4</code> 测试通过。</li>
-								<li>默认简英双语字幕，支持简英双语，简体中文，繁體中文，English SDH，Arabic，Danish，German，Greek，Spanish(es)，Spanish(es-ES)，Finnish，French，Hebrew，Indonesian，Icelandic，Italian，Japanese，Korean，Norwegian (Bokmål)，Dutch，Polish，Portuguese (Portugal)，Portuguese (Brazil)，Romanian，Russian，Swedish，Thai，Turkish，Vietnamese等多国字幕。</li>
-								<li>切换字幕的方法：1.播放视频后，在视频内鼠标右键打开菜单. 2.启用【显示所有控件. 3.鼠标单击页面右下角的 <span class="menu-item"></span> 4.选择对应的字幕. 5.然后按照上边步骤1-2关闭【显示所有控件】</li>
-								<li>播放器的控制面板可以通过上边的【显示所有控件】打开，可以选择字幕、播放速度等。<strong><span style="color:#E53333;">请勿在全屏播放时持续启用【显示所有控件】功能，使用完成后立即关闭！！！ </span></strong>
+									本播放器已经<code>Black.Mirror.Bandersnatch.2018.1080p.NF.WEB-DL.x264.AAC-PTerWEB.mp4</code>
+									测试通过。</li>
+								<li>默认简英双语字幕，支持简英双语，简体中文，繁體中文，English
+									SDH，Arabic，Danish，German，Greek，Spanish(es)，Spanish(es-ES)，Finnish，French，Hebrew，Indonesian，Icelandic，Italian，Japanese，Korean，Norwegian
+									(Bokmål)，Dutch，Polish，Portuguese (Portugal)，Portuguese
+									(Brazil)，Romanian，Russian，Swedish，Thai，Turkish，Vietnamese等多国字幕。</li>
+								<li>切换字幕的方法：1.播放视频后，在视频内鼠标右键打开菜单. 2.启用【显示所有控件. 3.鼠标单击页面右下角的 <span
+										class="menu-item"></span> 4.选择对应的字幕. 5.然后按照上边步骤1-2关闭【显示所有控件】</li>
+								<li>播放器的控制面板可以通过上边的【显示所有控件】打开，可以选择字幕、播放速度等。<strong><span
+											style="color:#E53333;">请勿在全屏播放时持续启用【显示所有控件】功能，使用完成后立即关闭！！！ </span></strong>
 									否则可能遇到播放问题。</li>
 							</ul>
 
@@ -105,7 +124,8 @@
 					<video id="video" preload="metadata">
 						<source id="video-source" src="">
 						<track label="简英双字" kind="subtitles" srclang="zh-Hans"
-							src="subtitle/Black.Mirror.Bandersnatch.2018.1080p.NF.WEB-DL.x264.AAC-PTerWEB.zh-Hans&En.vtt" default>
+							src="subtitle/Black.Mirror.Bandersnatch.2018.1080p.NF.WEB-DL.x264.AAC-PTerWEB.zh-Hans&En.vtt"
+							default>
 						<track label="简体中文" kind="subtitles" srclang="zh-Hans"
 							src="subtitle/Black.Mirror.Bandersnatch.2018.1080p.NF.WEB-DL.x264.AAC-PTerWEB.zh-Hans.vtt">
 						<track label="繁體中文" kind="subtitles" srclang="zh-Hant"
